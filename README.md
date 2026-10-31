@@ -31,7 +31,7 @@
 - Implemented SEO (Meta tags, Alt text, robots.txt, sitemap.xml).
 - Implemented an image lightbox popup.
 
-**Live Website Link:** https://hilarious-melomakarona-09008d.netlify.app
+**Live Website Link:** https://silly-piroshki-d3d7e8.netlify.app
 
 
 ## References

@@ -16,29 +16,33 @@
 </head>
 <body>
 
+    <meta name="description" content="XPressoCafe - Freshly brewed coffee, quiches, pies, and slushies. Everything costs only R14. Find your nearest location today!">
+    <meta name="keywords" content="coffee, cafe, XPresso, cheap coffee, pie, quiche, slushie, South Africa">
+    <meta name="author" content="Your Name">
+
     <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <i class="fa-duotone fa-solid fa-mug-hot"></i>
-                 <div class="logo-text">XPresso<span>Cafe</span></div>
-                  
-            </a>
-            
-            <nav>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#produts">Produts</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="nav-buttons">
-                <a href="#" class="btn btn-secondary">Sign-In</a>
-                <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <i class="fa-duotone fa-solid fa-mug-hot"></i>
+            <div class="logo-text">XPresso<span>Cafe</span></div>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#produts">Products</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="signin.html" class="btn btn-secondary">Sign-In</a>
+            <button onclick="toggleCart()" class="btn btn-primary order-btn">Order Now</button>
         </div>
-    </header>
+    </div>
+</header>
    
     <!-- Hero section -->
     <section class="hero">
@@ -53,14 +57,20 @@
                 <p class="hero-text">Exprience a varity food, quality coffee
                 and refreshing drinks in a warm and welcoming cafe.</p>
                 <div class="hero-buttons">
-                    <a href="#product" class="btn btn-primary">Explore our menu</a>
-                    <a href="#" class="btm btn-secondary">Visit Our Cafe</a>
+                    <a href="#produts" class="btn btn-primary">Explore our menu</a>
+                    <a href="#locations"class="btm btn-secondary">Visit Our Cafe</a>
                 </div>
             </div>
-            <img src="6.jpg" alt="" width="500px">
+
+            <div class="hero-image">
+               <img src="6.jpg" alt="Coffee Cup">
+            </div>
         </div>
     </section>
    
+    <div id="menuModal" class="normal-section">
+    <div class="modal-content">
+
     <!-- Produts Section -->
     <section class="produts" id="produts">
         <div class="container">
@@ -72,12 +82,22 @@
                      to warm your soul.</P>
             </div>
 
-            <div class="product-grid">
+        
+                <!-- search bar goes here, OUTSITE the grid -->
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <input type="text" id="searchInput" onkeyup="filterProduts()" 
+                    placeholder="search...
+                    " 
+                    style="padding: 10px; width: 60%; max-width: 400px; border-radius: 5px;
+                    border: 1px solid #ccc;">
+                </div>
 
+                <div class="product-grid">
                 <!-- Card 1: Takeaway Coffee -->
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="11.JPG" alt="Takeaway Coffee" width="700px">
+                        <img src="11.JPG" alt="Takeaway Coffee" onclick="openLightbox('11.JPG')"
+                        style="cursor: pointer;"> 
                     </div>
                     <div class="product-info">
                         <div class="product-tag">BEST COFFEE & FOOD</div>
@@ -85,6 +105,8 @@
                         <p class="product-desc">A cup of freshly brewed house blend coffee.</p>
                         <div class="product-footer">
                             <div class="product-price">R14.00</div>
+                            <button class="btn btn-primary" onclick="addToCart('Xpresso House Blend', 14.00)">
+                            Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -92,7 +114,8 @@
                 <!-- Card 2: Crumble Donuts -->
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="10.JPG" alt="Crumble Donut" width="400px">
+                        <img src="10.JPG" alt="Crumble Donut" onclick="openLightbox('10.JPG')"
+                        style="cursor: pointer;">
                     </div>
                     <div class="product-info">
                         <div class="product-tag">NEW</div>
@@ -100,6 +123,8 @@
                         <p class="product-desc">Freshly baked, fluffy donuts topped with sweet cinnamon crumble.</p>
                         <div class="product-footer">
                             <div class="product-price">R14.00</div>
+                            <button class="btn btn-primary" onclick="addToCart('Cinnamon Crumble Donuts', 14.00)">
+                            Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -107,7 +132,8 @@
                 <!-- Card 3: Savory Pie -->
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="3.jpg" alt="Xpresso Savory Pie" width="600px">
+                        <img src="3.jpg" alt="Xpresso Savory Pie" onclick="openLightbox('3.jpg')"
+                        style="cursor: pointer;">
                     </div>
                     <div class="product-info">
                         <div class="product-tag">FRESH</div>
@@ -115,18 +141,70 @@
                         <p class="product-desc">Flaky, golden pastry filled with rich, savory minced beef.</p>
                         <div class="product-footer">
                             <div class="product-price">R14.00</div>
+                            <button class="btn btn-primary" onclick="addToCart('Golden Beef Pie', 14.00)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
+               
+                <!-- Card 4: Slishie -->
+                 <div class="product-card">
+                    <div class="product-img">
+                        <img src="29.png" alt="XPresso Slushie" onclick="openLightbox('29.png')"
+                        style="cursor: pointer;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-tag">COLD DRINK</div>
+                        <h3 class="product-title">Ice Cold Slushie</h3>
+                        <p class="product-desc">Refreshing frutiy slushie, perfect for a hot day.</p>
+                        <div class="product-footer">
+                            <div class="product-price">R14.00</div>
+                            <button class="btn btn-primary" onclick="addToCart('Ice Cold Slishie',14.00)">
+                                Add to cart</button>
+                            </button>
+                        </div>
+                    </div>
+                 </div> 
 
-            </div>
-                
+                 <!-- Card 5: Chocolate Muffin -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="30.png" alt="Chocolate Caramel Muffin" onclick="openLightbox('30.png')"
+                        style="cursor: pointer;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-tag">SWEET TREAT</div>
+                        <h3 class="product-title">Chocolate Caramel Muffin</h3>
+                        <p class="product-desc">Rich chocolate muffin drizzled with sweet caramel.</p>
+                        <div class="product-footer">
+                            <div class="product-price">R14.00</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Chocolate Caramel Muffin', 14.00)">Add to Cart</button>
+                    </div>
+                </div>
 
-            
-    </section>                
-
+                <!-- Card 6: Iced Tea -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="31.png" alt="XPresso Iced Tea" onclick="openLightbox('31.png')"
+                        style="cursor: pointer;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-tag">REFRESHING</div>
+                        <h3 class="product-title">Fruity Iced Tea</h3>
+                        <p class="product-desc">Ice-cold fruity iced tea with fresh lemon and mint.</p>
+                        <div class="product-footer">
+                            <div class="product-price">R14.00</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('Fruity Iced Tea', 14.00)">Add to Cart</button>
+                    </div>
+                </div>
+               </section>   
+                   </div>             
+                </div>
             
     <!-- LOCATIONS SECTION -->
+     <div id="locationsModal" class="normal-section">
+    <div class="modal-content">
     <section id="locations" class="info-section">
         <h2>Our Locations</h2>
         <div class="location-card">
@@ -139,8 +217,23 @@
             <p>45 Harbour Road, V&A Waterfront</p>
             <p>Phone: 021 555 5678</p>
         </div>
+        </div>
+        </div>
+        <!-- GOOGLE MAP -->
+            <div class="map-container" style="margin-top: 40px; width: 100%; height: 400px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.681279279782!2d18.4240553152141!3d-33.92486898062658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f882fc735%3A0x8d30eb3555f5b682!2sV%26A%20Waterfront!5e0!3m2!1sen!2sza!4v1684500000000!5m2!1sen!2sza" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 10px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
     </section>
-
+       </div>
+    </div>
     <!-- CONTACT SECTION -->
     <section id="contact" class="info-section">
         <h2>Contact Us</h2>
@@ -152,9 +245,29 @@
         <a href="https://twitter.com" target="_blank">Twitter</a>
     </section>
      
-    
 
     <!-- link to javascript file -->
     <script src="script.js"></script>
+
+    <!-- CART SIDEBAR -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Order</h3>
+        <button onclick="toggleCart()" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-items">
+        <p style="text-align:center; color: #888;">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+        <h4>Total: R<span id="cart-total">0.00</span></h4>
+        <p><small>Pay at the counter upon collection</small></p>
+        <button class="btn btn-primary" onclick="checkout()">Place Order</button>
+    </div>
+</div>
+
+<!-- LIGHTBOX POPUP -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; cursor:pointer;" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
 </body>
 </html>

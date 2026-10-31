@@ -1,2 +1,3 @@
-user-agent: *
+User-agent: *
 Allow: /
+Sitemap: https://silly-piroshki-d3d7e8.netlify.app/sitemap.xml
