@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - XPressoCafe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-duotone fa-solid fa-mug-hot"></i>
+                <div class="logo-text">XPresso<span>Cafe</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#locations">Locations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="info-section" style="margin-top: 100px; min-height: 70vh;">
+        <h2>Make an Enquiry</h2>
+        <p>Planning an event or need catering? Let us know!</p>
+        
+        <form class="signin-form" onsubmit="event.preventDefault(); alert('Enquiry submitted! We will contact you soon.');">
+            <label>Full Name:</label>
+            <input type="text" placeholder="Puleng lekala" required>
+            
+            <label>Email Address:</label>
+            <input type="email" placeholder="Puleng@example.com" required>
+            
+            <label>Date of Event:</label>
+            <input type="date" required>
+            
+            <label>Number of People:</label>
+            <input type="number" min="1" max="100" placeholder="10" required>
+            
+            <label>Type of Enquiry:</label>
+            <select required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+                <option value="">Select an option...</option>
+                <option value="catering">Catering</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="sponsor">Sponsorship</option>
+            </select>
+            
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit Enquiry</button>
+        </form>
+    </section>
+</body>
+</html>

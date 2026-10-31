@@ -23,3 +23,19 @@
 ### Mobile
 ![Mobile View](images/mobile.png)
 
+
+## Part 3 Final Submission
+- Fixed Part 2 feedback: Order Now and Sign-In buttons now work.
+- I added interactive cart, search filter, and Google Maps.
+- I added form validation to contact.html and enquiry.html.
+- Implemented SEO (Meta tags, Alt text, robots.txt, sitemap.xml).
+- Implemented an image lightbox popup.
+
+**Live Website Link:** https://hilarious-melomakarona-09008d.netlify.app
+
+
+## References
+- MDN Web Docs. (2024). *JavaScript DOM Manipulation*.
+- W3Schools. (2024). *HTML Forms*.
+- Google Maps Platform. (2024). *Embedding a map*.
+

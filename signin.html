@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - XPressoCafe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-duotone fa-solid fa-mug-hot"></i>
+                <div class="logo-text">XPresso<span>Cafe</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#locations">Locations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="signin.html" class="btn btn-secondary">Sign-In</a>
+                <button onclick="toggleCart()" class="btn btn-primary order-btn">Order Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIGN IN FORM -->
+    <section class="info-section" style="margin-top: 120px; padding: 60px 20px; min-height: 70vh;">
+        <h2>Sign In</h2>
+        <p>Please enter your details to sign in to XPressoCafe.</p>
+        
+        <form class="signin-form" onsubmit="event.preventDefault(); alert('Sign in successful!');">
+            <label>Email Address:</label>
+            <input type="email" placeholder="you@example.com" required>
+            
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password" required>
+            
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        
+        <p class="signin-link">Don't have an account? <a href="javascript:void(0);" 
+            onclick="alert('Account creation is coming soon!')">Create one here</a></p>
+    </section>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

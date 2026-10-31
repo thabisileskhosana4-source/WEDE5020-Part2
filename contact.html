@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - XPressoCafe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-duotone fa-solid fa-mug-hot"></i>
+                <div class="logo-text">XPresso<span>Cafe</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#locations">Locations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="info-section" style="margin-top: 100px; min-height: 70vh;">
+        <h2>Contact Us</h2>
+        <p>Send us a general message and we will get back to you.</p>
+        
+        <form class="signin-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <label>Full Name:</label>
+            <input type="text" placeholder="Puleng lekala" required>
+            
+            <label>Email Address:</label>
+            <input type="email" placeholder="Puleng@example.com" required>
+            
+            <label>Message:</label>
+            <textarea placeholder="How can we help you?" rows="5" required></textarea>
+            
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
