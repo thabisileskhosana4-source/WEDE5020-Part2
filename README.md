@@ -15,13 +15,13 @@
 ## Screenshots
 
 ### Desktop
-![Desktop View](imges/desktop.png)
+![Desktop View](desktop.png)
 
 ### Tablet
-![Tablet View](images/tablet.png)
+![Tablet View](tablet.png)
 
 ### Mobile
-![Mobile View](images/mobile.png)
+![Mobile View](mobile.png)
 
 
 ## Part 3 Final Submission
@@ -49,9 +49,8 @@ I used HTML heading tags like `<h1>` and `<h2>` so search engines know what the 
 Meta elements are hidden tags in the `<head>` section that give search engines a summary of the page. 
 Example: `<meta name="description" content="XPressoCafe - Freshly brewed coffee, quiches, pies, and slushies. Everything costs only R14.">`
 
-## Netlify Live Link:** https://silly-piroshki-d3d7e8.netlify.app
+## Netlify Live Link:** https://tourmaline-panda-2a7750.netlify.app
 ## GitHub Link:** https://github.com/thabisileskhosana4-source/WEDE5020-Part2.git
-
 ## References
 - MDN Web Docs. (2024). *JavaScript DOM Manipulation*.
 - W3Schools. (2024). *HTML Forms*.
